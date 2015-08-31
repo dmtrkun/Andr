@@ -1,0 +1,14 @@
+.\Flash\lcd_4bit.o: LCD_4bit.c
+.\Flash\lcd_4bit.o: D:\Keil\ARM\INC\Philips\LPC23xx.H
+.\Flash\lcd_4bit.o: include.h
+.\Flash\lcd_4bit.o: D:\Keil\ARM\RV31\INC\stdlib.h
+.\Flash\lcd_4bit.o: D:\Keil\ARM\RV31\INC\string.h
+.\Flash\lcd_4bit.o: crc16.h
+.\Flash\lcd_4bit.o: LCD.h
+.\Flash\lcd_4bit.o: rtc.h
+.\Flash\lcd_4bit.o: types.h
+.\Flash\lcd_4bit.o: types.h
+.\Flash\lcd_4bit.o: keypad.h
+.\Flash\lcd_4bit.o: main.h
+.\Flash\lcd_4bit.o: clock.h
+.\Flash\lcd_4bit.o: setup.h

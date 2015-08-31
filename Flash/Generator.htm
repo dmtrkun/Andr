@@ -1,0 +1,995 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\Flash\Generator.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\Flash\Generator.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, RVCT3.1 [Build 942]: Last Updated: Wed Aug 19 20:40:13 2015
+<BR><P>
+<H3>Maximum Stack Usage =        272 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+main &rArr; main_loop &rArr; print_freq &rArr; __aeabi_drsub &rArr; _double_addcore &rArr; _double_epilogue &rArr; _double_round
+<P>
+<H3>
+Functions with no stack information
+</H3><UL>
+ <LI><a href="#[1fa3470]">Reset_Handler</a>
+ <LI><a href="#[2b2d9c8]">MCI_ReadFifo</a>
+ <LI><a href="#[2b2d980]">MCI_WriteFifo</a>
+ <LI><a href="#[1fa3740]">Undef_Handler</a>
+ <LI><a href="#[1fa36f8]">SWI_Handler</a>
+ <LI><a href="#[1fa36b0]">PAbt_Handler</a>
+ <LI><a href="#[1fa3668]">DAbt_Handler</a>
+ <LI><a href="#[1fa3620]">IRQ_Handler</a>
+ <LI><a href="#[1fa35d8]">FIQ_Handler</a>
+</UL>
+</UL>
+<P>
+<H3>
+Mutually Recursive functions
+</H3> <LI><a href="#[1fa3740]">Undef_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1fa3740]">Undef_Handler</a><BR>
+ <LI><a href="#[1fa36f8]">SWI_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1fa36f8]">SWI_Handler</a><BR>
+ <LI><a href="#[1fa36b0]">PAbt_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1fa36b0]">PAbt_Handler</a><BR>
+ <LI><a href="#[1fa3668]">DAbt_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1fa3668]">DAbt_Handler</a><BR>
+ <LI><a href="#[1fa3620]">IRQ_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1fa3620]">IRQ_Handler</a><BR>
+ <LI><a href="#[1fa35d8]">FIQ_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1fa35d8]">FIQ_Handler</a><BR>
+</UL>
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[1fa3470]">Reset_Handler</a>
+ <LI><a href="#[1fa3740]">Undef_Handler</a>
+ <LI><a href="#[1fa36f8]">SWI_Handler</a>
+ <LI><a href="#[1fa36b0]">PAbt_Handler</a>
+ <LI><a href="#[1fa3668]">DAbt_Handler</a>
+ <LI><a href="#[1fa3620]">IRQ_Handler</a>
+ <LI><a href="#[1fa35d8]">FIQ_Handler</a>
+ <LI><a href="#[2b2c350]">__main</a>
+ <LI><a href="#[1f9e5c0]">T0_IRQHandler</a>
+ <LI><a href="#[1f93c88]">MCI_IRQHandler</a>
+ <LI><a href="#[1f9e7b8]">main</a>
+ <LI><a href="#[2b260a0]">_sputc</a>
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[1fa3470]"></a>Reset_Handler</STRONG> (ARM, 0 bytes, Stack size unknown bytes, lpc2300.o(RESET))
+<BR>[Address Reference Count : 1]<UL><LI> lpc2300.o(RESET)
+</UL>
+<P><STRONG><a name="[2b2c350]"></a>__main</STRONG> (ARM, 8 bytes, Stack size 0 bytes, entry.o($$startup$$))
+<BR><BR>[Calls]<UL><LI><a href="#[2b200a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__init (via Veneer)
+</UL>
+
+<P><STRONG><a name="[2b200f0]"></a>__call_main</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, init.o(.emb_text))
+<BR><BR>[Called By]<UL><LI><a href="#[2b200a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__init
+</UL>
+
+<P><STRONG><a name="[1fa2020]"></a>init_serial</STRONG> (ARM, 84 bytes, Stack size 0 bytes, serial.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f9e7b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[1fa2940]"></a>sendchar</STRONG> (ARM, 32 bytes, Stack size 0 bytes, serial.o(.text), UNUSED)
+
+<P><STRONG><a name="[1fa1fd8]"></a>getkey</STRONG> (ARM, 32 bytes, Stack size 0 bytes, serial.o(.text), UNUSED)
+
+<P><STRONG><a name="[1fa0a98]"></a>lcd_write_4bit</STRONG> (ARM, 84 bytes, Stack size 4 bytes, lcd_4bit.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1fa1278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+</UL>
+
+<P><STRONG><a name="[1fa0a50]"></a>lcd_write_8bit</STRONG> (ARM, 80 bytes, Stack size 4 bytes, lcd_4bit.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = lcd_write_8bit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1fa1278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1fa0930]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
+<LI><a href="#[1fa0a08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write
+</UL>
+
+<P><STRONG><a name="[1fa0a08]"></a>lcd_write</STRONG> (ARM, 24 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = lcd_write &rArr; lcd_write_8bit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1fa0a50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_8bit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1fa09c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_cmd
+<LI><a href="#[1fa11a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_data
+</UL>
+
+<P><STRONG><a name="[1fa09c0]"></a>lcd_write_cmd</STRONG> (ARM, 40 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = lcd_write_cmd &rArr; lcd_write &rArr; lcd_write_8bit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1fa0a08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write
+<LI><a href="#[1fa11e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_while_busy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1fa08a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
+<LI><a href="#[1fa08e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_cursor
+<LI><a href="#[1fa0930]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
+</UL>
+
+<P><STRONG><a name="[1fa0978]"></a>lcd_putchar</STRONG> (ARM, 24 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = lcd_putchar &rArr; lcd_write_data &rArr; lcd_write &rArr; lcd_write_8bit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1fa11a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_data
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e920]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Disp_Bargraph
+<LI><a href="#[1fa0858]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_print
+<LI><a href="#[1fa0930]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
+</UL>
+
+<P><STRONG><a name="[1fa0930]"></a>lcd_init</STRONG> (ARM, 168 bytes, Stack size 12 bytes, lcd_4bit.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = lcd_init &rArr; lcd_putchar &rArr; lcd_write_data &rArr; lcd_write &rArr; lcd_write_8bit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1fa0978]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_putchar
+<LI><a href="#[1fa09c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_cmd
+<LI><a href="#[1fa0a50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_8bit
+<LI><a href="#[1fa1278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e7b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[1fa08e8]"></a>set_cursor</STRONG> (ARM, 44 bytes, Stack size 16 bytes, lcd_4bit.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = set_cursor &rArr; lcd_write_cmd &rArr; lcd_write &rArr; lcd_write_8bit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1fa09c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_cmd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e7b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[1f9e890]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_refresh
+<LI><a href="#[1f9e8d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_freq
+<LI><a href="#[1f9e920]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Disp_Bargraph
+<LI><a href="#[1fa08a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
+</UL>
+
+<P><STRONG><a name="[1fa08a0]"></a>lcd_clear</STRONG> (ARM, 32 bytes, Stack size 4 bytes, lcd_4bit.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = lcd_clear &rArr; set_cursor &rArr; lcd_write_cmd &rArr; lcd_write &rArr; lcd_write_8bit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1fa08e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_cursor
+<LI><a href="#[1fa09c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_cmd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e7b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[1f9e848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
+<LI><a href="#[1f9e890]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_refresh
+<LI><a href="#[1f9e8d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_freq
+</UL>
+
+<P><STRONG><a name="[1fa0858]"></a>lcd_print</STRONG> (ARM, 40 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = lcd_print &rArr; lcd_putchar &rArr; lcd_write_data &rArr; lcd_write &rArr; lcd_write_8bit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1fa0978]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_putchar
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e7b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[1f9e890]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_refresh
+<LI><a href="#[1f9e8d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_freq
+</UL>
+
+<P><STRONG><a name="[1fa0810]"></a>T1_IRQHandler</STRONG> (ARM, 40 bytes, Stack size 8 bytes, lcd_4bit.o(.text), UNUSED)
+
+<P><STRONG><a name="[1f9ea88]"></a>LED_Init</STRONG> (ARM, 52 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f9e7b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[1f9ea40]"></a>CPU_LED_Toggle</STRONG> (ARM, 48 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f9e5c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;T0_IRQHandler
+</UL>
+
+<P><STRONG><a name="[1f9e9f8]"></a>LED_On</STRONG> (ARM, 24 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f9e7b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[1f9e848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
+</UL>
+
+<P><STRONG><a name="[1f9e9b0]"></a>LED_Off</STRONG> (ARM, 24 bytes, Stack size 0 bytes, main.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f9e7b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[1f9e848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
+</UL>
+
+<P><STRONG><a name="[1f9e968]"></a>LED_Out</STRONG> (ARM, 24 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
+
+<P><STRONG><a name="[1f9e920]"></a>Disp_Bargraph</STRONG> (ARM, 92 bytes, Stack size 24 bytes, main.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1fa08e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_cursor
+<LI><a href="#[1fa0978]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_putchar
+</UL>
+
+<P><STRONG><a name="[1f9e8d8]"></a>print_freq</STRONG> (ARM, 504 bytes, Stack size 48 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = print_freq &rArr; __aeabi_drsub &rArr; _double_addcore &rArr; _double_epilogue &rArr; _double_round
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1fa0858]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_print
+<LI><a href="#[1fa08a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
+<LI><a href="#[1fa08e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_cursor
+<LI><a href="#[2b20bb8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2uiz (via Veneer)
+<LI><a href="#[2b20d28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f (via Veneer)
+<LI><a href="#[2b20f18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv (via Veneer)
+<LI><a href="#[2b21100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul (via Veneer)
+<LI><a href="#[2b218a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz (via Veneer)
+<LI><a href="#[2b21a10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d (via Veneer)
+<LI><a href="#[2b21b98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv (via Veneer)
+<LI><a href="#[2b21d20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul (via Veneer)
+<LI><a href="#[2b21fd0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub (via Veneer)
+<LI><a href="#[2b25ef0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__1sprintf (via Veneer)
+<LI><a href="#[2b2b888]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen (via Veneer)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
+</UL>
+
+<P><STRONG><a name="[1f9e890]"></a>print_refresh</STRONG> (ARM, 284 bytes, Stack size 8 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = print_refresh &rArr; lcd_clear &rArr; set_cursor &rArr; lcd_write_cmd &rArr; lcd_write &rArr; lcd_write_8bit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1fa0858]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_print
+<LI><a href="#[1fa08a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
+<LI><a href="#[1fa08e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_cursor
+<LI><a href="#[2b25ef0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__1sprintf (via Veneer)
+<LI><a href="#[2b2b888]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen (via Veneer)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
+</UL>
+
+<P><STRONG><a name="[1f9e848]"></a>main_loop</STRONG> (ARM, 1156 bytes, Stack size 48 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = main_loop &rArr; print_freq &rArr; __aeabi_drsub &rArr; _double_addcore &rArr; _double_epilogue &rArr; _double_round
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1f9dfd8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_evnt_queue
+<LI><a href="#[1f9e0b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clock
+<LI><a href="#[1f9e0f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep
+<LI><a href="#[1f9e890]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_refresh
+<LI><a href="#[1f9e8d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_freq
+<LI><a href="#[1f9e9b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Off
+<LI><a href="#[1f9e9f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_On
+<LI><a href="#[1fa08a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
+<LI><a href="#[2b25ef0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__1sprintf (via Veneer)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e7b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[1f9e800]"></a>T2_IRQHandler</STRONG> (ARM, 188 bytes, Stack size 8 bytes, main.o(.text), UNUSED)
+
+<P><STRONG><a name="[1f9e7b8]"></a>main</STRONG> (ARM, 640 bytes, Stack size 8 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = main &rArr; main_loop &rArr; print_freq &rArr; __aeabi_drsub &rArr; _double_addcore &rArr; _double_epilogue &rArr; _double_round
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1f9df48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rtc_init
+<LI><a href="#[1f9df90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_keypad
+<LI><a href="#[1f9e650]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTCGetTime
+<LI><a href="#[1f9e848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
+<LI><a href="#[1f9e9b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Off
+<LI><a href="#[1f9e9f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_On
+<LI><a href="#[1f9ea88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Init
+<LI><a href="#[1fa0858]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_print
+<LI><a href="#[1fa08a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_clear
+<LI><a href="#[1fa08e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_cursor
+<LI><a href="#[1fa0930]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
+<LI><a href="#[1fa2020]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_serial
+<LI><a href="#[2b25ef0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__1sprintf (via Veneer)
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> init.o(.text)
+</UL>
+<P><STRONG><a name="[1f9e770]"></a>set_defaults</STRONG> (ARM, 152 bytes, Stack size 16 bytes, main.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f9e020]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc16
+<LI><a href="#[1f9e698]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Write_Block
+<LI><a href="#[2b2bd78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4 (via Veneer)
+</UL>
+
+<P><STRONG><a name="[1f9e728]"></a>save_params</STRONG> (ARM, 88 bytes, Stack size 16 bytes, main.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f9e020]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;crc16
+<LI><a href="#[1f9e698]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Write_Block
+<LI><a href="#[2b2bd78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4 (via Veneer)
+</UL>
+
+<P><STRONG><a name="[1f9df48]"></a>rtc_init</STRONG> (ARM, 32 bytes, Stack size 0 bytes, rtc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f9e7b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[1f9ca18]"></a>Init_RTC</STRONG> (ARM, 88 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
+
+<P><STRONG><a name="[1f9c9d0]"></a>RTCHandler</STRONG> (ARM, 52 bytes, Stack size 8 bytes, rtc.o(.text), UNUSED)
+
+<P><STRONG><a name="[1f9c988]"></a>RTCInit</STRONG> (ARM, 48 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
+
+<P><STRONG><a name="[1f9c940]"></a>RTCStart</STRONG> (ARM, 32 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
+
+<P><STRONG><a name="[1f9c8f8]"></a>RTCStop</STRONG> (ARM, 24 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
+
+<P><STRONG><a name="[1f9c8b0]"></a>RTC_CTCReset</STRONG> (ARM, 24 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
+
+<P><STRONG><a name="[1f9c868]"></a>RTCSetTime</STRONG> (ARM, 80 bytes, Stack size 16 bytes, rtc.o(.text), UNUSED)
+
+<P><STRONG><a name="[1f9c820]"></a>RTCSetAlarm</STRONG> (ARM, 80 bytes, Stack size 16 bytes, rtc.o(.text), UNUSED)
+
+<P><STRONG><a name="[1f9e650]"></a>RTCGetTime</STRONG> (ARM, 100 bytes, Stack size 0 bytes, rtc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f9e7b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[1f9c7d8]"></a>RTCSetAlarmMask</STRONG> (ARM, 12 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
+
+<P><STRONG><a name="[1f9df90]"></a>init_keypad</STRONG> (ARM, 156 bytes, Stack size 8 bytes, keypad.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = init_keypad
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2b2baf0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4 (via Veneer)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e7b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[1f9af50]"></a>get_keypad_in</STRONG> (ARM, 284 bytes, Stack size 24 bytes, keypad.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = get_keypad_in
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9ae30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChkKeyPad
+</UL>
+
+<P><STRONG><a name="[1f9af08]"></a>put_evnt_queue</STRONG> (ARM, 236 bytes, Stack size 0 bytes, keypad.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f9aec0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event_man
+</UL>
+
+<P><STRONG><a name="[1f9e0f8]"></a>beep</STRONG> (ARM, 68 bytes, Stack size 0 bytes, keypad.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f9aec0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event_man
+<LI><a href="#[1f9e848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
+</UL>
+
+<P><STRONG><a name="[1f9aec0]"></a>event_man</STRONG> (ARM, 1312 bytes, Stack size 8 bytes, keypad.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = event_man
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1f9af08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;put_evnt_queue
+<LI><a href="#[1f9e0f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e5c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;T0_IRQHandler
+</UL>
+
+<P><STRONG><a name="[1f9ae78]"></a>UpdateDisTimers</STRONG> (ARM, 76 bytes, Stack size 8 bytes, keypad.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = UpdateDisTimers
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1f9ad10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clock_ms
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e5c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;T0_IRQHandler
+</UL>
+
+<P><STRONG><a name="[1f9ae30]"></a>ChkKeyPad</STRONG> (ARM, 192 bytes, Stack size 16 bytes, keypad.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = ChkKeyPad &rArr; get_keypad_in
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1f9ad10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clock_ms
+<LI><a href="#[1f9af50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_keypad_in
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e5c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;T0_IRQHandler
+</UL>
+
+<P><STRONG><a name="[1f9dfd8]"></a>get_evnt_queue</STRONG> (ARM, 172 bytes, Stack size 0 bytes, keypad.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f9e848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
+</UL>
+
+<P><STRONG><a name="[1f9ade8]"></a>chk_evnt_queue</STRONG> (ARM, 124 bytes, Stack size 0 bytes, keypad.o(.text), UNUSED)
+
+<P><STRONG><a name="[1f9ad10]"></a>clock_ms</STRONG> (ARM, 12 bytes, Stack size 0 bytes, clock.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f9ae30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChkKeyPad
+<LI><a href="#[1f9ae78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UpdateDisTimers
+</UL>
+
+<P><STRONG><a name="[1f9e0b0]"></a>clock</STRONG> (ARM, 12 bytes, Stack size 0 bytes, clock.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f9e848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop
+</UL>
+
+<P><STRONG><a name="[1f99a90]"></a>init_clock</STRONG> (ARM, 36 bytes, Stack size 0 bytes, clock.o(.text), UNUSED)
+
+<P><STRONG><a name="[1f99a48]"></a>beep_hndl</STRONG> (ARM, 148 bytes, Stack size 8 bytes, clock.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = beep_hndl &rArr; __aeabi_uidivmod
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2b2bf28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod (via Veneer)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e5c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;T0_IRQHandler
+</UL>
+
+<P><STRONG><a name="[1f9e5c0]"></a>T0_IRQHandler</STRONG> (ARM, 272 bytes, Stack size 24 bytes, clock.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = T0_IRQHandler &rArr; ChkKeyPad &rArr; get_keypad_in
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1f99a48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_hndl
+<LI><a href="#[1f9ae30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChkKeyPad
+<LI><a href="#[1f9ae78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UpdateDisTimers
+<LI><a href="#[1f9aec0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;event_man
+<LI><a href="#[1f9ea40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPU_LED_Toggle
+<LI><a href="#[2b2bf28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod (via Veneer)
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
+</UL>
+<P><STRONG><a name="[1f99a00]"></a>ADC_IRQHandler</STRONG> (ARM, 44 bytes, Stack size 8 bytes, clock.o(.text), UNUSED)
+
+<P><STRONG><a name="[1f9e020]"></a>crc16</STRONG> (ARM, 100 bytes, Stack size 4 bytes, mathutl.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1f9e728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;save_params
+<LI><a href="#[1f9e770]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_defaults
+</UL>
+
+<P><STRONG><a name="[1f93fe8]"></a>MCI_TXEnable</STRONG> (ARM, 48 bytes, Stack size 0 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1f9e698]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Write_Block
+</UL>
+
+<P><STRONG><a name="[1f93fa0]"></a>MCI_TXDisable</STRONG> (ARM, 48 bytes, Stack size 0 bytes, mci.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f93d18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_DATA_END_InterruptService
+</UL>
+
+<P><STRONG><a name="[1f93f58]"></a>MCI_RXEnable</STRONG> (ARM, 48 bytes, Stack size 0 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[2b2da10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Read_Block
+</UL>
+
+<P><STRONG><a name="[1f93f10]"></a>MCI_RXDisable</STRONG> (ARM, 48 bytes, Stack size 0 bytes, mci.o(.text), UNUSED)
+
+<P><STRONG><a name="[1f93ec8]"></a>MCI_GetCmdResp</STRONG> (ARM, 360 bytes, Stack size 8 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1f93bf8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_ACMD_Bus_Width
+<LI><a href="#[1f93c40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_ACMD
+<LI><a href="#[1f93e38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_Status
+<LI><a href="#[1f95490]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Set_BlockLen
+<LI><a href="#[1f954d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Set_Address
+<LI><a href="#[1f95520]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_CSD
+<LI><a href="#[1f95568]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Select_Card
+<LI><a href="#[1f955f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Check_CID
+<LI><a href="#[2b2da58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_Read_Block
+<LI><a href="#[2b2daa0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_Write_Block
+<LI><a href="#[2b2dae8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_Stop
+<LI><a href="#[2b2db30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_ACMD_OP_Cond
+<LI><a href="#[2b2db78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_OP_Cond
+<LI><a href="#[2b2dbc0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Go_Idle_State
+</UL>
+
+<P><STRONG><a name="[1f93e80]"></a>MCI_SendCmd</STRONG> (ARM, 164 bytes, Stack size 16 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1f93bf8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_ACMD_Bus_Width
+<LI><a href="#[1f93c40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_ACMD
+<LI><a href="#[1f93e38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_Status
+<LI><a href="#[1f95490]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Set_BlockLen
+<LI><a href="#[1f954d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Set_Address
+<LI><a href="#[1f95520]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_CSD
+<LI><a href="#[1f95568]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Select_Card
+<LI><a href="#[1f955f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Check_CID
+<LI><a href="#[2b2da58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_Read_Block
+<LI><a href="#[2b2daa0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_Write_Block
+<LI><a href="#[2b2dae8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_Stop
+<LI><a href="#[2b2db30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_ACMD_OP_Cond
+<LI><a href="#[2b2db78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_OP_Cond
+<LI><a href="#[2b2dbc0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Go_Idle_State
+</UL>
+
+<P><STRONG><a name="[1f93e38]"></a>MCI_Send_Status</STRONG> (ARM, 160 bytes, Stack size 32 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93e80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_SendCmd
+<LI><a href="#[1f93ec8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_GetCmdResp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f93df0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_CheckStatus
+</UL>
+
+<P><STRONG><a name="[1f93df0]"></a>MCI_CheckStatus</STRONG> (ARM, 68 bytes, Stack size 8 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93e38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_Status
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e698]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Write_Block
+<LI><a href="#[2b2da10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Read_Block
+</UL>
+
+<P><STRONG><a name="[1f93da8]"></a>MCI_CmdProcess</STRONG> (ARM, 212 bytes, Stack size 0 bytes, mci.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f93c88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_IRQHandler
+</UL>
+
+<P><STRONG><a name="[1f93d60]"></a>MCI_DataErrorProcess</STRONG> (ARM, 212 bytes, Stack size 0 bytes, mci.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f93c88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_IRQHandler
+</UL>
+
+<P><STRONG><a name="[1f93d18]"></a>MCI_DATA_END_InterruptService</STRONG> (ARM, 180 bytes, Stack size 4 bytes, mci.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = MCI_DATA_END_InterruptService
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1f93fa0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_TXDisable
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f93c88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_IRQHandler
+</UL>
+
+<P><STRONG><a name="[1f93cd0]"></a>MCI_FIFOInterruptService</STRONG> (ARM, 296 bytes, Stack size 8 bytes, mci.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
+<LI>Call Chain = MCI_FIFOInterruptService
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2b2d980]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_WriteFifo
+<LI><a href="#[2b2d9c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_ReadFifo
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f93c88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_IRQHandler
+</UL>
+
+<P><STRONG><a name="[1f93c88]"></a>MCI_IRQHandler</STRONG> (ARM, 216 bytes, Stack size 32 bytes, mci.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
+<LI>Call Chain = MCI_IRQHandler &rArr; MCI_FIFOInterruptService
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1f93cd0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_FIFOInterruptService
+<LI><a href="#[1f93d18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_DATA_END_InterruptService
+<LI><a href="#[1f93d60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_DataErrorProcess
+<LI><a href="#[1f93da8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_CmdProcess
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> mci.o(.text)
+</UL>
+<P><STRONG><a name="[1f95448]"></a>MCI_Set_MCIClock</STRONG> (ARM, 100 bytes, Stack size 0 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1f955b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Init
+</UL>
+
+<P><STRONG><a name="[1f93c40]"></a>MCI_Send_ACMD</STRONG> (ARM, 160 bytes, Stack size 36 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93e80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_SendCmd
+<LI><a href="#[1f93ec8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_GetCmdResp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f93bf8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_ACMD_Bus_Width
+<LI><a href="#[2b2db30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_ACMD_OP_Cond
+</UL>
+
+<P><STRONG><a name="[1f93bf8]"></a>MCI_Send_ACMD_Bus_Width</STRONG> (ARM, 156 bytes, Stack size 36 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93c40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_ACMD
+<LI><a href="#[1f93e80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_SendCmd
+<LI><a href="#[1f93ec8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_GetCmdResp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f953b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SD_Set_BusWidth
+</UL>
+
+<P><STRONG><a name="[1f953b8]"></a>SD_Set_BusWidth</STRONG> (ARM, 124 bytes, Stack size 12 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93bf8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_ACMD_Bus_Width
+</UL>
+
+<P><STRONG><a name="[1f955b0]"></a>MCI_Init</STRONG> (ARM, 336 bytes, Stack size 8 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f95448]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Set_MCIClock
+<LI><a href="#[2b2d938]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;install_irq
+</UL>
+
+<P><STRONG><a name="[2b2dbc0]"></a>MCI_Go_Idle_State</STRONG> (ARM, 112 bytes, Stack size 28 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93e80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_SendCmd
+<LI><a href="#[1f93ec8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_GetCmdResp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f95688]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_CardInit
+</UL>
+
+<P><STRONG><a name="[2b2db78]"></a>MCI_Send_OP_Cond</STRONG> (ARM, 128 bytes, Stack size 32 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93e80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_SendCmd
+<LI><a href="#[1f93ec8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_GetCmdResp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f95688]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_CardInit
+</UL>
+
+<P><STRONG><a name="[2b2db30]"></a>MCI_Send_ACMD_OP_Cond</STRONG> (ARM, 188 bytes, Stack size 32 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93c40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_ACMD
+<LI><a href="#[1f93e80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_SendCmd
+<LI><a href="#[1f93ec8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_GetCmdResp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f95688]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_CardInit
+</UL>
+
+<P><STRONG><a name="[1f95688]"></a>MCI_CardInit</STRONG> (ARM, 124 bytes, Stack size 12 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[2b2db30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_ACMD_OP_Cond
+<LI><a href="#[2b2db78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_OP_Cond
+<LI><a href="#[2b2dbc0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Go_Idle_State
+</UL>
+
+<P><STRONG><a name="[1f955f8]"></a>MCI_Check_CID</STRONG> (ARM, 260 bytes, Stack size 32 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93e80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_SendCmd
+<LI><a href="#[1f93ec8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_GetCmdResp
+</UL>
+
+<P><STRONG><a name="[1f954d8]"></a>MCI_Set_Address</STRONG> (ARM, 180 bytes, Stack size 36 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93e80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_SendCmd
+<LI><a href="#[1f93ec8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_GetCmdResp
+</UL>
+
+<P><STRONG><a name="[1f95520]"></a>MCI_Send_CSD</STRONG> (ARM, 168 bytes, Stack size 36 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93e80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_SendCmd
+<LI><a href="#[1f93ec8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_GetCmdResp
+</UL>
+
+<P><STRONG><a name="[1f95568]"></a>MCI_Select_Card</STRONG> (ARM, 184 bytes, Stack size 36 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93e80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_SendCmd
+<LI><a href="#[1f93ec8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_GetCmdResp
+</UL>
+
+<P><STRONG><a name="[1f95490]"></a>MCI_Set_BlockLen</STRONG> (ARM, 156 bytes, Stack size 36 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93e80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_SendCmd
+<LI><a href="#[1f93ec8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_GetCmdResp
+</UL>
+
+<P><STRONG><a name="[2b2dae8]"></a>MCI_Send_Stop</STRONG> (ARM, 140 bytes, Stack size 32 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93e80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_SendCmd
+<LI><a href="#[1f93ec8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_GetCmdResp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e698]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Write_Block
+<LI><a href="#[2b2da10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Read_Block
+</UL>
+
+<P><STRONG><a name="[2b2daa0]"></a>MCI_Send_Write_Block</STRONG> (ARM, 148 bytes, Stack size 36 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93e80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_SendCmd
+<LI><a href="#[1f93ec8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_GetCmdResp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e698]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Write_Block
+</UL>
+
+<P><STRONG><a name="[2b2da58]"></a>MCI_Send_Read_Block</STRONG> (ARM, 148 bytes, Stack size 36 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93e80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_SendCmd
+<LI><a href="#[1f93ec8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_GetCmdResp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2b2da10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Read_Block
+</UL>
+
+<P><STRONG><a name="[1f9e698]"></a>MCI_Write_Block</STRONG> (ARM, 180 bytes, Stack size 16 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93df0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_CheckStatus
+<LI><a href="#[1f93fe8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_TXEnable
+<LI><a href="#[2b2daa0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_Write_Block
+<LI><a href="#[2b2dae8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_Stop
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;save_params
+<LI><a href="#[1f9e770]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_defaults
+</UL>
+
+<P><STRONG><a name="[2b2da10]"></a>MCI_Read_Block</STRONG> (ARM, 180 bytes, Stack size 16 bytes, mci.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1f93df0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_CheckStatus
+<LI><a href="#[1f93f58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_RXEnable
+<LI><a href="#[2b2da58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_Read_Block
+<LI><a href="#[2b2dae8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Send_Stop
+</UL>
+
+<P><STRONG><a name="[2b2cc58]"></a>init_VIC</STRONG> (ARM, 88 bytes, Stack size 0 bytes, irq.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b2d938]"></a>install_irq</STRONG> (ARM, 92 bytes, Stack size 8 bytes, irq.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1f955b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_Init
+</UL>
+
+<P><STRONG><a name="[2b2cc10]"></a>EnableIRQ</STRONG> (ARM, 20 bytes, Stack size 0 bytes, irq.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b2cbc8]"></a>DisableIRQ</STRONG> (ARM, 40 bytes, Stack size 0 bytes, irq.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b2bf70]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, uidiv.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b2bf28]"></a>__aeabi_uidivmod</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, uidiv.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f99a48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;beep_hndl (via Veneer)
+<LI><a href="#[1f9e5c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;T0_IRQHandler (via Veneer)
+<LI><a href="#[2b26178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
+
+<P><STRONG><a name="[2b2bdc0]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b2bd78]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1f9e728]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;save_params (via Veneer)
+<LI><a href="#[1f9e770]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_defaults (via Veneer)
+</UL>
+
+<P><STRONG><a name="[2b2bd30]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b2bc10]"></a>__aeabi_memset</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[2b2ba60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset_wrapper
+<LI><a href="#[2b2bb38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+</UL>
+
+<P><STRONG><a name="[2b2bbc8]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b2bb80]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b2bb38]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[2b2bc10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+</UL>
+
+<P><STRONG><a name="[2b2baf0]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f9df90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_keypad (via Veneer)
+</UL>
+
+<P><STRONG><a name="[2b2baa8]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b2ba60]"></a>_memset_wrapper</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[2b2bc10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+</UL>
+
+<P><STRONG><a name="[2b2b888]"></a>strlen</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, strlen.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f9e890]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_refresh (via Veneer)
+<LI><a href="#[1f9e8d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_freq (via Veneer)
+</UL>
+
+<P><STRONG><a name="[2b22060]"></a>__aeabi_dadd</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, dadd.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[2b220a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_addcore
+</UL>
+
+<P><STRONG><a name="[2b22018]"></a>__aeabi_dsub</STRONG> (Thumb, 50 bytes, Stack size 24 bytes, dadd.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[2b220a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_addcore
+</UL>
+
+<P><STRONG><a name="[2b21fd0]"></a>__aeabi_drsub</STRONG> (Thumb, 50 bytes, Stack size 24 bytes, dadd.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = __aeabi_drsub &rArr; _double_addcore &rArr; _double_epilogue &rArr; _double_round
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2b220a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_addcore
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e8d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_freq (via Veneer)
+</UL>
+
+<P><STRONG><a name="[2b21d20]"></a>__aeabi_dmul</STRONG> (Thumb, 234 bytes, Stack size 88 bytes, dmul.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2b1f6e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e8d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_freq (via Veneer)
+</UL>
+
+<P><STRONG><a name="[2b21b98]"></a>__aeabi_ddiv</STRONG> (Thumb, 248 bytes, Stack size 80 bytes, ddiv.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = __aeabi_ddiv &rArr; _double_epilogue &rArr; _double_round
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2b1f6e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e8d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_freq (via Veneer)
+</UL>
+
+<P><STRONG><a name="[2b21a10]"></a>__aeabi_ui2d</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, dfltu.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = __aeabi_ui2d &rArr; _double_epilogue &rArr; _double_round
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2b1f6e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e8d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_freq (via Veneer)
+</UL>
+
+<P><STRONG><a name="[2b218a8]"></a>__aeabi_d2uiz</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, dfixu.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = __aeabi_d2uiz &rArr; __aeabi_llsr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2b1f9b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e8d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_freq (via Veneer)
+</UL>
+
+<P><STRONG><a name="[2b21100]"></a>__aeabi_fmul</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, fmul.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = __aeabi_fmul &rArr; _float_epilogue
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2b1f198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_epilogue
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e8d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_freq (via Veneer)
+</UL>
+
+<P><STRONG><a name="[2b20f18]"></a>__aeabi_fdiv</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, fdiv.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = __aeabi_fdiv &rArr; _float_epilogue
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2b1f198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_epilogue
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e8d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_freq (via Veneer)
+</UL>
+
+<P><STRONG><a name="[2b20d28]"></a>__aeabi_ui2f</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, ffltu.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = __aeabi_ui2f &rArr; _float_epilogue
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2b1f198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_epilogue
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e8d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_freq (via Veneer)
+</UL>
+
+<P><STRONG><a name="[2b20bb8]"></a>__aeabi_f2uiz</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, ffixu.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1f9e8d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_freq (via Veneer)
+</UL>
+
+<P><STRONG><a name="[2b20750]"></a>__ARM_call_via_r0</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, callvia.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b20708]"></a>__call_via_r0</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, callvia.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b206c0]"></a>__ARM_call_via_r1</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, callvia.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b20678]"></a>__call_via_r1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, callvia.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b20630]"></a>__ARM_call_via_r2</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, callvia.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[2b26178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
+
+<P><STRONG><a name="[2b205e8]"></a>__call_via_r2</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, callvia.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b205a0]"></a>__ARM_call_via_r3</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, callvia.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[2b200a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__init
+</UL>
+
+<P><STRONG><a name="[2b20558]"></a>__call_via_r3</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, callvia.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b20510]"></a>__ARM_call_via_r4</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, callvia.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b204c8]"></a>__call_via_r4</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, callvia.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b20480]"></a>__ARM_call_via_r5</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, callvia.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b20438]"></a>__call_via_r5</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, callvia.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b203f0]"></a>__ARM_call_via_r6</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, callvia.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[2b260e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
+<LI><a href="#[2b26130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
+</UL>
+
+<P><STRONG><a name="[2b203a8]"></a>__call_via_r6</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, callvia.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b20360]"></a>__ARM_call_via_r7</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, callvia.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b20318]"></a>__call_via_r7</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, callvia.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b200a8]"></a>__init</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, init.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[2b200f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__call_main
+<LI><a href="#[2b205a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_call_via_r3
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2b2c350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main (via Veneer)
+</UL>
+
+<P><STRONG><a name="[2b20060]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b1fb68]"></a>__aeabi_llsl</STRONG> (Thumb, 36 bytes, Stack size 4 bytes, llshl.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __aeabi_llsl
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2b220a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_addcore
+</UL>
+
+<P><STRONG><a name="[2b1fb20]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, llshl.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b1f9b8]"></a>__aeabi_llsr</STRONG> (Thumb, 34 bytes, Stack size 4 bytes, llushr.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __aeabi_llsr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2b218a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
+<LI><a href="#[2b220a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_addcore
+</UL>
+
+<P><STRONG><a name="[2b1f970]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 4 bytes, llushr.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b1f730]"></a>_double_round</STRONG> (Thumb, 58 bytes, Stack size 32 bytes, depilogue.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = _double_round
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2b1f6e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+</UL>
+
+<P><STRONG><a name="[2b1f6e8]"></a>_double_epilogue</STRONG> (Thumb, 142 bytes, Stack size 32 bytes, depilogue.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = _double_epilogue &rArr; _double_round
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2b1f730]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2b21a10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
+<LI><a href="#[2b21b98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[2b21d20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[2b220a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_addcore
+</UL>
+
+<P><STRONG><a name="[2b1f1e0]"></a>_float_round</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, fepilogue.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[2b1f198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_epilogue
+</UL>
+
+<P><STRONG><a name="[2b1f198]"></a>_float_epilogue</STRONG> (Thumb, 68 bytes, Stack size 12 bytes, fepilogue.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = _float_epilogue
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2b1f1e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2b20d28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
+<LI><a href="#[2b20f18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
+<LI><a href="#[2b21100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fmul
+</UL>
+
+<P><STRONG><a name="[2b1eb38]"></a>__decompress</STRONG> (ARM, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b1eaf0]"></a>__decompress1</STRONG> (ARM, 116 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+
+<P><STRONG><a name="[2b2d9c8]"></a>MCI_ReadFifo</STRONG> (ARM, 0 bytes, Stack size unknown bytes, readfifo.o(MCIFIFO))
+<BR><BR>[Called By]<UL><LI><a href="#[1f93cd0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_FIFOInterruptService
+</UL>
+
+<P><STRONG><a name="[2b2d980]"></a>MCI_WriteFifo</STRONG> (ARM, 0 bytes, Stack size unknown bytes, readfifo.o(MCIFIFO))
+<BR><BR>[Called By]<UL><LI><a href="#[1f93cd0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCI_FIFOInterruptService
+</UL>
+
+<P><STRONG><a name="[2b25f38]"></a>__0sprintf_6</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, printf6.o(i.__0sprintf_6), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[2b260a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sputc
+<LI><a href="#[2b26178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
+
+<P><STRONG><a name="[2b25ef0]"></a>__1sprintf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf6.o(i.__0sprintf_6))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __1sprintf
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1f9e7b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main (via Veneer)
+<LI><a href="#[1f9e848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main_loop (via Veneer)
+<LI><a href="#[1f9e890]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_refresh (via Veneer)
+<LI><a href="#[1f9e8d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_freq (via Veneer)
+</UL>
+
+<P><STRONG><a name="[2b1edc0]"></a>__scatterload_copy</STRONG> (ARM, 24 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[2b1edc0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2b1edc0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
+</UL>
+
+<P><STRONG><a name="[2b1ed78]"></a>__scatterload_null</STRONG> (ARM, 4 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+
+<P><STRONG><a name="[2b1ed30]"></a>__scatterload_zeroinit</STRONG> (ARM, 24 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[1fa3740]"></a>Undef_Handler</STRONG> (ARM, 4 bytes, Stack size unknown bytes, lpc2300.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[1fa3740]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Undef_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1fa3740]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Undef_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> lpc2300.o(RESET)
+</UL>
+<P><STRONG><a name="[1fa36f8]"></a>SWI_Handler</STRONG> (ARM, 4 bytes, Stack size unknown bytes, lpc2300.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[1fa36f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SWI_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1fa36f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SWI_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> lpc2300.o(RESET)
+</UL>
+<P><STRONG><a name="[1fa36b0]"></a>PAbt_Handler</STRONG> (ARM, 4 bytes, Stack size unknown bytes, lpc2300.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[1fa36b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PAbt_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1fa36b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PAbt_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> lpc2300.o(RESET)
+</UL>
+<P><STRONG><a name="[1fa3668]"></a>DAbt_Handler</STRONG> (ARM, 4 bytes, Stack size unknown bytes, lpc2300.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[1fa3668]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAbt_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1fa3668]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAbt_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> lpc2300.o(RESET)
+</UL>
+<P><STRONG><a name="[1fa3620]"></a>IRQ_Handler</STRONG> (ARM, 4 bytes, Stack size unknown bytes, lpc2300.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[1fa3620]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1fa3620]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> lpc2300.o(RESET)
+</UL>
+<P><STRONG><a name="[1fa35d8]"></a>FIQ_Handler</STRONG> (ARM, 4 bytes, Stack size unknown bytes, lpc2300.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[1fa35d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIQ_Handler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1fa35d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIQ_Handler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> lpc2300.o(RESET)
+</UL>
+<P><STRONG><a name="[1fa1278]"></a>delay</STRONG> (ARM, 24 bytes, Stack size 0 bytes, lcd_4bit.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1fa0930]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_init
+<LI><a href="#[1fa0a50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_8bit
+<LI><a href="#[1fa0a98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_4bit
+<LI><a href="#[1fa1230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_read_status
+</UL>
+
+<P><STRONG><a name="[1fa1230]"></a>lcd_read_status</STRONG> (ARM, 124 bytes, Stack size 4 bytes, lcd_4bit.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = lcd_read_status
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1fa1278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1fa11e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_while_busy
+</UL>
+
+<P><STRONG><a name="[1fa11e8]"></a>wait_while_busy</STRONG> (ARM, 36 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = wait_while_busy &rArr; lcd_read_status
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1fa1230]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_read_status
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1fa09c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_cmd
+<LI><a href="#[1fa11a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write_data
+</UL>
+
+<P><STRONG><a name="[1fa11a0]"></a>lcd_write_data</STRONG> (ARM, 40 bytes, Stack size 8 bytes, lcd_4bit.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = lcd_write_data &rArr; lcd_write &rArr; lcd_write_8bit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1fa0a08]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_write
+<LI><a href="#[1fa11e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wait_while_busy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1fa0978]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lcd_putchar
+</UL>
+
+<P><STRONG><a name="[2b26178]"></a>_printf_core</STRONG> (Thumb, 790 bytes, Stack size 96 bytes, printf6.o(i._printf_core), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[2b20630]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_call_via_r2
+<LI><a href="#[2b260e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
+<LI><a href="#[2b26130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
+<LI><a href="#[2b2bf28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2b25f38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sprintf_6
+</UL>
+
+<P><STRONG><a name="[2b26130]"></a>_printf_post_padding</STRONG> (Thumb, 38 bytes, Stack size 24 bytes, printf6.o(i._printf_post_padding), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[2b203f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_call_via_r6
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2b26178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
+
+<P><STRONG><a name="[2b260e8]"></a>_printf_pre_padding</STRONG> (Thumb, 48 bytes, Stack size 40 bytes, printf6.o(i._printf_pre_padding), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[2b203f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_call_via_r6
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2b26178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
+
+<P><STRONG><a name="[2b260a0]"></a>_sputc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, printf6.o(i._sputc))
+<BR><BR>[Called By]<UL><LI><a href="#[2b25f38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0sprintf_6
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> printf6.o(i.__0sprintf_6)
+</UL>
+<P><STRONG><a name="[2b220a8]"></a>_double_addcore</STRONG> (Thumb, 300 bytes, Stack size 80 bytes, dadd.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = _double_addcore &rArr; _double_epilogue &rArr; _double_round
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2b1f6e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<LI><a href="#[2b1f9b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<LI><a href="#[2b1fb68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2b21fd0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[2b22018]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[2b22060]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+</UL>
+<P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>

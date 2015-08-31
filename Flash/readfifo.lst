@@ -1,0 +1,140 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             MCIFIFO, CODE, READONLY
+    2 00000000         
+    3 00000000                 EXPORT           MCI_ReadFifo
+    4 00000000                 EXPORT           MCI_WriteFifo
+    5 00000000         
+    6 00000000         ; int MCI_ReadFifo(unsigned int * dest);
+    7 00000000         ; int MCI_WriteFifo(unsigned int * src);
+    8 00000000        4 
+                       src     RN               4
+    9 00000000        5 
+                       dst     RN               5
+   10 00000000         
+   11 00000000         MCI_ReadFifo
+   12 00000000 E92D5030        STMFD            sp!,{src,dst,r12,lr}
+   13 00000004 E59F403C        LDR              src, mci_fifo
+   14 00000008 E1A05000        MOV              dst, r0
+   15 0000000C E894000F        LDMIA            src, {r0-r3}
+   16 00000010 E8A5000F        STMIA            dst!, {r0-r3}
+   17 00000014 E894000F        LDMIA            src, {r0-r3}
+   18 00000018 E8A5000F        STMIA            dst!, {r0-r3}
+   19 0000001C E1A00005        MOV              r0, dst
+   20 00000020 E8BD9030        LDMFD            sp!,{src,dst,r12,pc}
+   21 00000024         
+   22 00000024         MCI_WriteFifo
+   23 00000024 E92D5030        STMFD            sp!,{src,dst, r12,lr}
+   24 00000028 E59F5018        LDR              dst, mci_fifo
+   25 0000002C E1A04000        MOV              src, r0
+   26 00000030 E8B4000F        LDMIA            src!, {r0-r3}
+   27 00000034 E885000F        STMIA            dst, {r0-r3}
+   28 00000038 E8B4000F        LDMIA            src!, {r0-r3}
+   29 0000003C E885000F        STMIA            dst, {r0-r3}
+   30 00000040 E1A00004        MOV              r0, src
+   31 00000044 E8BD9030        LDMFD            sp!,{src,dst,r12 ,pc}
+   32 00000048         
+   33 00000048         mci_fifo
+   34 00000048 E008C080        DCD              0xE008C080
+   35 0000004C                 END
+Command Line: --debug --xref --device=DARMP --apcs=interwork -o.\Flash\readfifo
+.o -ID:\Keil\ARM\INC\Philips --predefine="__MICROLIB SETA 1" --list=.\Flash\rea
+dfifo.lst readfifo.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+MCIFIFO 00000000
+
+Symbol: MCIFIFO
+   Definitions
+      At line 1 in file readfifo.s
+   Uses
+      None
+Comment: MCIFIFO unused
+MCI_ReadFifo 00000000
+
+Symbol: MCI_ReadFifo
+   Definitions
+      At line 11 in file readfifo.s
+   Uses
+      At line 3 in file readfifo.s
+Comment: MCI_ReadFifo used once
+MCI_WriteFifo 00000024
+
+Symbol: MCI_WriteFifo
+   Definitions
+      At line 22 in file readfifo.s
+   Uses
+      At line 4 in file readfifo.s
+Comment: MCI_WriteFifo used once
+mci_fifo 00000048
+
+Symbol: mci_fifo
+   Definitions
+      At line 33 in file readfifo.s
+   Uses
+      At line 13 in file readfifo.s
+      At line 24 in file readfifo.s
+
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.debug_info$$$MCIFIFO 00000000
+
+Symbol: .debug_info$$$MCIFIFO
+   Definitions
+      None
+   Uses
+      None
+Warning: .debug_info$$$MCIFIFO undefinedComment: .debug_info$$$MCIFIFO unused
+1 symbol
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.debug_line$$$MCIFIFO 00000000
+
+Symbol: .debug_line$$$MCIFIFO
+   Definitions
+      None
+   Uses
+      None
+Warning: .debug_line$$$MCIFIFO undefinedComment: .debug_line$$$MCIFIFO unused
+1 symbol
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.debug_abbrev 00000000
+
+Symbol: .debug_abbrev
+   Definitions
+      None
+   Uses
+      None
+Warning: .debug_abbrev undefinedComment: .debug_abbrev unused
+__ARM_asm.debug_abbrev 00000000
+
+Symbol: __ARM_asm.debug_abbrev
+   Definitions
+      None
+   Uses
+      None
+Warning: __ARM_asm.debug_abbrev undefinedComment: __ARM_asm.debug_abbrev unused
+2 symbols
+330 symbols in table

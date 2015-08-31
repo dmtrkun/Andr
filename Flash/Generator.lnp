@@ -1,0 +1,4 @@
+".\flash\lpc2300.o" ".\flash\retarget.o" ".\flash\serial.o" ".\flash\lcd_4bit.o" ".\flash\main.o" ".\flash\rtc.o" ".\flash\keypad.o" ".\flash\clock.o" ".\flash\setup.o" ".\flash\ssp.o" ".\flash\mathutl.o" ".\flash\dma.o" ".\flash\mcitest.o" ".\flash\mci.o" ".\flash\readfifo.o" ".\flash\irq.o" --library_type=microlib --device DARMP --strict --scatter ".\Flash\Generator.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Flash\Generator.map" -o ".\Flash\Generator.axf"

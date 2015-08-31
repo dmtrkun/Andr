@@ -1,0 +1,15 @@
+.\Flash\main.o: main.c
+.\Flash\main.o: D:\Keil\ARM\RV31\INC\stdio.h
+.\Flash\main.o: D:\Keil\ARM\INC\Philips\LPC23xx.H
+.\Flash\main.o: include.h
+.\Flash\main.o: D:\Keil\ARM\RV31\INC\stdlib.h
+.\Flash\main.o: D:\Keil\ARM\RV31\INC\string.h
+.\Flash\main.o: crc16.h
+.\Flash\main.o: LCD.h
+.\Flash\main.o: rtc.h
+.\Flash\main.o: types.h
+.\Flash\main.o: types.h
+.\Flash\main.o: keypad.h
+.\Flash\main.o: main.h
+.\Flash\main.o: clock.h
+.\Flash\main.o: setup.h

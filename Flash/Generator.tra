@@ -1,0 +1,34 @@
+*** Creating Trace Output File '.\Flash\Generator.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\flash\lpc2300.o"'
+### List of Objects: adding '".\flash\retarget.o"'
+### List of Objects: adding '".\flash\serial.o"'
+### List of Objects: adding '".\flash\lcd_4bit.o"'
+### List of Objects: adding '".\flash\main.o"'
+### List of Objects: adding '".\flash\rtc.o"'
+### List of Objects: adding '".\flash\keypad.o"'
+### List of Objects: adding '".\flash\clock.o"'
+### List of Objects: adding '".\flash\setup.o"'
+### List of Objects: adding '".\flash\ssp.o"'
+### List of Objects: adding '".\flash\mathutl.o"'
+### List of Objects: adding '".\flash\dma.o"'
+### List of Objects: adding '".\flash\mcitest.o"'
+### List of Objects: adding '".\flash\mci.o"'
+### List of Objects: adding '".\flash\readfifo.o"'
+### List of Objects: adding '".\flash\irq.o"'
+### ADS-LD Command completed:
+".\flash\lpc2300.o" ".\flash\retarget.o" ".\flash\serial.o" ".\flash\lcd_4bit.o" ".\flash\main.o" ".\flash\rtc.o" ".\flash\keypad.o" ".\flash\clock.o" ".\flash\setup.o" ".\flash\ssp.o" ".\flash\mathutl.o" ".\flash\dma.o" ".\flash\mcitest.o" ".\flash\mci.o" ".\flash\readfifo.o" ".\flash\irq.o" --library_type=microlib --device DARMP --strict --scatter ".\Flash\Generator.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Flash\Generator.map" -o ".\Flash\Generator.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\Flash\Generator.axf'
+### ADS-LD Command File: '.\Flash\Generator.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\Flash\Generator.lnp', Handle=0x00000708
+### Writing '.lnp' file
+### ADS-LD Command file '.\Flash\Generator.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.
