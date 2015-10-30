@@ -592,11 +592,13 @@ unsigned long print_freq(void)
 		freq_out_real = f * 100;
 		cycle_counter = 0;
 		num_tics_correct_counter = num_tics_correct;
-		T2MR0 = num_tics;
-		T2TC = 0;
-		T2TCR         = 3;
-		T2TCR         = 1;
-
+		if(runStatus)
+		{
+			T2MR0 = num_tics;
+			T2TC = 0;
+			T2TCR         = 3;
+			T2TCR         = 1;
+		}
 //		T2MCR         = 3;                           /* Interrupt enable and Reset on MR0  */
 
 	}else
@@ -655,6 +657,17 @@ void main_loop(void)
 		case WE_UPHLD:
 		case WE_UPKEY: /*Start button*/
 //		case WE_B:
+			if(runMode == 0)
+			{
+				if(freq_out>1)
+				{
+					status = 1;
+					startOutFrequency();
+				}
+				hold_time = clock();
+				status = 1;
+				break;
+			}
 			if(runStatus == 0) /*Start*/
 			{
 				oldSeconds = RTclock.seconds;
@@ -680,6 +693,12 @@ void main_loop(void)
 //		case WE_C:
 		case WE_DWNHLD:
 		case WE_DWNKEY: /*Stop button*/
+			if(runMode == 0)
+			{
+				status = 1;
+				stopOutFrequency();
+				break;
+			}
 			status = 1;
 			digit_stat = STAT_BEFORE_DOT;
 			freq_out = 0;
@@ -738,8 +757,6 @@ void main_loop(void)
 			case WE_7:
 			case WE_8:
 			case WE_9:
-				if(freq_out == 0)
-					startOutFrequency();
 
 				len = strlen(freq_string);
 				if(len<((digit_stat == STAT_AFTER_DOT)?(LEN_BEFORE_DOT+1+LEN_AFTER_DOT):LEN_BEFORE_DOT))
